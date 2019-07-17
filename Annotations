@@ -37,7 +37,7 @@ ls:
     -1                      List one file per line    
 
 tree: list contents of a specified directory in a tree like format.
-    -L specify wich tree level you want the output, for example:
+    -L specify which tree level you want the output, for example:
     tree -L 1, would output only the first level of contents in the specified directory.
 
 cat:
@@ -68,5 +68,12 @@ output: 00000000: 48c3 ab6c 6cc3 b620 77c3 b672 6c64       H..ll.. w..rld
 
 to list aliases you can use alias -p.
 
+We can create a job using an '&' after some command, pressing CTRL + Z will stop the process, for exmaple:
+    sleep 10 &
+To bring the process to foreground we can use fg %1.
 
+If you want to check which process is using a certain port is can type:
+    lsof -i :port_number
 
+Its possible to Disown a background job from your current terminal, you just need to type:
+    diswon %1
