@@ -37,7 +37,34 @@ ls:
     -1                      List one file per line    
 
 tree: list contents of a specified directory in a tree like format.
-    -L                      specify wich tree level you want the output, for example:
+    -L specify wich tree level you want the output, for example:
     tree -L 1, would output only the first level of contents in the specified directory.
+
+cat:
+    -n Print line numbers
+    -v Show non-printing characters using ^ and M- notation except LFD and TAB
+    -T Show TAB characters as ^I
+    -E Show linefeed(LF) characters as $
+    -e Same as -vE
+    -b Number nonempty output lines, overrides -n
+    -A equivalent to -vET
+    -s suppress repeated empty output lines, s refers to squeeze    
+
+cat can be used to concatenate files, for example:
+    cat file1 file 2 file 3 > file_1_2_3
+it can be used to concatenate files as part of a pipeline, for example:
+    cat file1 file2 file3 | grep something inside in one of the files.
+
+Note that gzip part files can be concatenated too, ofr example:
+    cat file1.gz file2.gz file3.gz > combined.gz
+
+Writing text to a file using Cat:
+    cat > my_file, this will let you writing the text on the terminal and then will wirte to my_file.
+    cat >> myfile, same as above except that will append the text to the end of the file.
+
+xxd: when you dont know the precise enconding of a file you can just hexdump the file with xxd, for example:
+    printf 'Hëllö wörld' | xxd
+output: 00000000: 48c3 ab6c 6cc3 b620 77c3 b672 6c64       H..ll.. w..rld
+
 
 
