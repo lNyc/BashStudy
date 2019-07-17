@@ -1,0 +1,11 @@
+echo is a Bash builtin command that writes the arguments it receives to the standard output. It appends a
+newline to the output, by default.
+
+
+About bash variables:
+It is important to note that $1 has to be quoted in double quote, not single quote. "$1" expands to the first
+command line argument, as desired, while '$1' evaluates to literal string $1.
+
+About Debug:
+The -x argument enables you to walk through each line in the script. 
+    Example: bash -x ( more on debug-mode.sh Chapter 1).
