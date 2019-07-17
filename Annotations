@@ -66,5 +66,7 @@ xxd: when you dont know the precise enconding of a file you can just hexdump the
     printf 'Hëllö wörld' | xxd
 output: 00000000: 48c3 ab6c 6cc3 b620 77c3 b672 6c64       H..ll.. w..rld
 
+to list aliases you can use alias -p.
+
 
 
