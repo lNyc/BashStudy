@@ -9,3 +9,14 @@ command line argument, as desired, while '$1' evaluates to literal string $1.
 About Debug:
 The -x argument enables you to walk through each line in the script. 
     Example: bash -x ( more on debug-mode.sh Chapter 1).
+
+About Shebang(#!):
+    #!/usr/bin/env bash
+    the env path is only resolved when its a directly call, for example: my-script.sh
+    the shebang is ignored when a specific interpreter is indicated, for example:
+    sh my-script.sh
+Command tips:
+cd - : take you to the previous directory you were in, no matter where it was.   
+cd ~ : let you in your home directory.
+
+
