@@ -77,3 +77,32 @@ If you want to check which process is using a certain port is can type:
 
 Its possible to Disown a background job from your current terminal, you just need to type:
     diswon %1
+
+Appending Output of a command to a file:
+    you can append or truncate an output using >> , > respectively.
+
+Its possible to redirect the STDOUT and STDERR, to this we have pointers, for example 1 point to STDOUT and 2 point to STDERR.
+we could write something like:
+
+    echo 'hello' > file.txt 2>&1
+
+the first expression echo 'hello' > file.txt points  STDOUT (1) to file.txt then, the second expression 2>&1 points the STDERR to STDOUT which is already pointed to file.txt,
+this ensure to the std output and err to be saved in our file.txt.
+
+We could shorten the command to:
+
+    echo 'hello' &> file.txt
+
+though its not recomended if shell compatibility is a concern.
+
+we can redirect multiple commands to a same file, we just need to put all the commands in brackets, for example:
+
+{
+    ls -l 
+    &&
+    echo 'end of a file'
+} > output.txt
+
+the command above would generate a file with the output of ls -l followed by the 'end of a file' string.
+
+
